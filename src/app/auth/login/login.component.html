@@ -1,0 +1,17 @@
+<div class="d-flex flex-row justify-content-center pt-xl-5">
+  <div class="col-xs-12 col-sm-10 col-md-8">
+    <form (ngSubmit)="onSignIn(f)" #f="ngForm">
+      <div class="from-group">
+        <label for="roll">Roll No.</label>
+        <input type="number" id="roll" name="roll" ngModel class="form-control">
+      </div>
+      <div class="from-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" ngModel class="form-control">
+      </div>
+      <br>
+      <button type="submit" class="btn btn-primary">Log In</button>
+    </form>
+  </div>
+</div>
+
