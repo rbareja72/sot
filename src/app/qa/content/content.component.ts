@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {QuestionModel} from "../Question.model";
 
 @Component({
   selector: 'app-content',
@@ -6,6 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./content.component.css']
 })
 export class ContentComponent implements OnInit {
+
+  qa: QuestionModel = {
+    question: 'qwda',
+    optionA: 'asfaf',
+    optionB: 'asfaf',
+    optionC: 'asfaf',
+    optionD: 'asfaf',
+    selected: 'b',
+  };
 
   constructor() { }
 

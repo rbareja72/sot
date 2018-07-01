@@ -1,8 +1,16 @@
 <div class="d-flex flex-row justify-content-center">
     <div class="col-md-12">
-      <h2>
+      <h2 *ngIf="qa === null">
         Select a Question
       </h2>
+      <ng-template [ngIf]="qa !== null">
+        <p>Q. {{qa.question}}</p><br>
+        <input type="radio" id="A" [checked]="qa.selected==='a'"> {{qa.optionA}}<br>
+        <input type="radio" id="B" [checked]="qa.selected==='b'"> {{qa.optionB}}<br>
+        <input type="radio" id="C" [checked]="qa.selected==='c'"> {{qa.optionC}}<br>
+        <input type="radio" id="D" [checked]="qa.selected==='d'"> {{qa.optionD}}<br>
+      </ng-template>
+
     </div>
 </div>
 
