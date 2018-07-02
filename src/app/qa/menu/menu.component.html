@@ -1,9 +1,10 @@
-<div class="list-group list-group-flush bg-dark" style="height: 100vh">
-  <a class="list-group-item list-group-item-action"
+<div class="list-group list-group-flush pr-3" style="height: 92vh; overflow:auto">
+  <h2 class="text-white">Questions</h2>
+  <a class="list-group-item list-group-item-action text-white-50 bg-dark"
      [routerLink]="qa"
+     routerLinkActive="active"
      [queryParams]="{'q': i}"
-     *ngFor="let i of questions"
-     [ngClass]="{'active':i === q}"  >
+     *ngFor="let i of questions">
       Question {{i}}
   </a>
 </div>

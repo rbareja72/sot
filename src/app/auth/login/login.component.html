@@ -1,9 +1,19 @@
 <div class="d-flex flex-row justify-content-center pt-xl-5">
   <div class="col-xs-12 col-sm-10 col-md-8">
+    <div *ngIf="status===-2" class="alert alert-danger">
+      Roll Number does not exist. Please Sign up.
+    </div>
+    <div *ngIf="status===-1" class="alert alert-danger">
+      Wrong password/roll number.
+    </div>
+    <div *ngIf="status===-3" class="alert alert-danger">
+      Please provide complete details.
+    </div>
+    <h2>Login</h2>
     <form (ngSubmit)="onSignIn(f)" #f="ngForm">
       <div class="from-group">
         <label for="roll">Roll No.</label>
-        <input type="number" id="roll" name="roll" ngModel class="form-control">
+        <input type="text" id="roll" name="roll" ngModel class="form-control">
       </div>
       <div class="from-group">
         <label for="password">Password</label>

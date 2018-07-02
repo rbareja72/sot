@@ -1,14 +1,30 @@
-<div class="d-flex flex-row justify-content-center">
+<div class="d-flex flex-row justify-content-center pt-3" style="overflow: auto; height: 92vh">
     <div class="col-md-12">
       <h2 *ngIf="qa === null">
         Select a Question
       </h2>
       <ng-template [ngIf]="qa !== null">
-        <p>Q. {{qa.question}}</p><br>
-        <input type="radio" id="A" [checked]="qa.selected==='a'"> {{qa.optionA}}<br>
-        <input type="radio" id="B" [checked]="qa.selected==='b'"> {{qa.optionB}}<br>
-        <input type="radio" id="C" [checked]="qa.selected==='c'"> {{qa.optionC}}<br>
-        <input type="radio" id="D" [checked]="qa.selected==='d'"> {{qa.optionD}}<br>
+        <h3 style="white-space: pre">Q. {{qa.question}}</h3><br>
+        <div class="form-check mb-3">
+          <label for="A" class="form-check-label" style="white-space: pre">
+            <input type="radio" id="A" [checked]="qa.selected==='a'" name="A" class="form-check-input">{{qa.optionA}}
+          </label>
+        </div>
+        <div class="form-check mb-3">
+          <label for="B" class="form-check-label" style="white-space: pre">
+            <input type="radio" id="B" [checked]="qa.selected==='b'" name="B" class="form-check-input">{{qa.optionB}}
+          </label>
+        </div>
+        <div class="form-check mb-3">
+          <label for="C" class="form-check-label"style="white-space: pre">
+            <input type="radio" id="C" [checked]="qa.selected==='c'" name="C" class="form-check-input">{{qa.optionC}}
+          </label>
+        </div>
+        <div class="form-check mb-3">
+          <label for="D" class="form-check-label" style="white-space: pre">
+            <input type="radio" id="D" [checked]="qa.selected==='d'" name="D" class="form-check-input">{{qa.optionD}}
+          </label>
+        </div>
       </ng-template>
 
     </div>

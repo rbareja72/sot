@@ -11,6 +11,9 @@ import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import {AppRoutingModule} from './app-routing.module';
 import {FormsModule} from "@angular/forms";
+import {AuthService} from "./auth/auth.service";
+import {CommonModule} from "@angular/common";
+import {AuthGuardService} from "./auth/auth-guard.service";
 
 @NgModule({
   declarations: [
@@ -24,11 +27,12 @@ import {FormsModule} from "@angular/forms";
     SignupComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [AuthService, AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
