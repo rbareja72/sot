@@ -8,7 +8,7 @@ import {ActivatedRoute, Router} from "@angular/router";
 })
 export class MenuComponent implements OnInit {
 
-  public questions = [1,2,3,4,5,6,7,8,10];//,11,12,13,14,15,16,17];
+  public questions = [1,2,3,4,5,6,7,8,10,11,12,13];//,11,12,13,14,15,16,17];
   public q = 0;
   constructor(private route: ActivatedRoute, private router: Router) { }
 
