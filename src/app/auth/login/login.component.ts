@@ -24,7 +24,7 @@ export class LoginComponent  {
     this.status = this.authService.login(roll, password);
     console.log(this.status);
     if (this.status === 1){
-      this.router.navigate(['/qa']);
+      this.router.navigate(['/qa'],{queryParams:{q:1}});
     }
   }
 

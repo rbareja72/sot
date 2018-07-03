@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {QuestionModel} from "../question.model";
+import {QuestionModel} from "../qa.model";
+import {QaService} from "../qa.service";
+import {ActivatedRoute, Params} from "@angular/router";
 
 @Component({
   selector: 'app-content',
@@ -8,36 +10,23 @@ import {QuestionModel} from "../question.model";
 })
 export class ContentComponent implements OnInit {
 
-  qa1: QuestionModel = {
-    question: 'What\'s the name of standard input and output file in C?',
-    optionA: 'stdio.h',
-    optionB: 'conio.h',
-    optionC: 'stdlib.h',
-    optionD: 'None of the above',
-    selected: '',
-  };
-  qa: QuestionModel = {
-    question: 'What\'s the output of this program?\n' +
-    '#include<stdio.h>\n' +
-    '#include<conio.h>\n' +
-    'void main()\n' +
-    '{\n' +
-    '\tint a=10,i;\n' +
-    '\tfor(i=0;i<a;i++){\n' +
-    '\t\tprintf("%d",a);\n' +
-    '\t}\n' +
-    '\tgetch();\n' +
-    '}',
-    optionA: 'stdio.h',
-    optionB: 'conio.h',
-    optionC: 'stdlib.h',
-    optionD: 'None of the above',
-    selected: '',
-  };
+  qa: QuestionModel = null;
+  q: number;
 
-  constructor() { }
+  constructor(private qaService: QaService, private route: ActivatedRoute) {
+
+  }
 
   ngOnInit() {
+    //console.log(this.route.snapshot.queryParams['q']);
+    this.qa = this.qaService.getQuestion(this.route.snapshot.queryParams['q'] - 1);
+    this.route.queryParams.subscribe(
+      (params: Params) => {
+        this.q = params['q']-1;
+        this.qa = this.qaService.getQuestion(this.q);
+      }
+    );
+    //console.log(this.qa.question);
   }
 
 }

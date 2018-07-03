@@ -1,6 +1,6 @@
 export class AuthService{
-  private username = '16701';
-  private password = 'qwerty';
+  private username = '1';
+  private password = '1';
   private status = 0; //untouched
 
   login(username: string, password: string): number {

@@ -2,9 +2,8 @@
   <h2 class="text-white">Questions</h2>
   <a class="list-group-item list-group-item-action text-white-50 bg-dark"
      [routerLink]="qa"
-     routerLinkActive="active"
-     [queryParams]="{'q': i}"
-     *ngFor="let i of questions">
-      Question {{i}}
+     [queryParams]="{'q':j+1}"
+     *ngFor="let i of questions; let j = index">
+      Question {{j+1}}
   </a>
 </div>

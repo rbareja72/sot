@@ -1,10 +1,10 @@
-<div class="d-flex flex-row justify-content-center pt-3" style="overflow: auto; height: 92vh">
-    <div class="col-md-12">
+<div class="d-flex flex-row justify-content-center pt-3" style="overflow-y: auto;overflow-wrap:break-word; width: 90vw;height: 92vh">
+    <div class="col-xl-12">
       <h2 *ngIf="qa === null">
         Select a Question
       </h2>
       <ng-template [ngIf]="qa !== null">
-        <h3 style="white-space: pre">Q. {{qa.question}}</h3><br>
+        <p style="white-space: pre; overflow-wrap: break-word">{{q+1}}. {{qa.question}}</p><br>
         <div class="form-check mb-3">
           <label for="A" class="form-check-label" style="white-space: pre">
             <input type="radio" id="A" [checked]="qa.selected==='a'" name="A" class="form-check-input">{{qa.optionA}}
