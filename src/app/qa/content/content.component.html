@@ -1,32 +1,32 @@
-<div class="d-flex flex-row justify-content-center pt-3" style="overflow-y: auto;overflow-wrap:break-word; width: 90vw;height: 92vh">
-    <div class="col-xl-12">
+<div class="d-flex flex-row justify-content-center pt-3" style="overflow-y: auto;overflow-wrap:break-word; width: 72vw;height: 92vh">
+   <div class="col-xl-12">
       <h2 *ngIf="qa === null">
-        Select a Question
+         Select a Question
       </h2>
       <ng-template [ngIf]="qa !== null">
-        <p style="white-space: pre; overflow-wrap: break-word">{{q+1}}. {{qa.question}}</p><br>
-        <div class="form-check mb-3">
-          <label for="A" class="form-check-label" style="white-space: pre">
-            <input type="radio" id="A" [checked]="qa.selected==='a'" name="A" class="form-check-input">{{qa.optionA}}
-          </label>
-        </div>
-        <div class="form-check mb-3">
-          <label for="B" class="form-check-label" style="white-space: pre">
-            <input type="radio" id="B" [checked]="qa.selected==='b'" name="B" class="form-check-input">{{qa.optionB}}
-          </label>
-        </div>
-        <div class="form-check mb-3">
-          <label for="C" class="form-check-label"style="white-space: pre">
-            <input type="radio" id="C" [checked]="qa.selected==='c'" name="C" class="form-check-input">{{qa.optionC}}
-          </label>
-        </div>
-        <div class="form-check mb-3">
-          <label for="D" class="form-check-label" style="white-space: pre">
-            <input type="radio" id="D" [checked]="qa.selected==='d'" name="D" class="form-check-input">{{qa.optionD}}
-          </label>
-        </div>
+         <p style="overflow-wrap: break-word">{{q+1}}. {{qa.question}}</p>
+            <br>
+         <div class="form-check mb-3">
+            <label for="A" class="form-check-label" style="white-space: pre">
+               <input type="radio" id="A" [checked]="qa.selected==='a'" name="A" class="form-check-input">{{qa.optionA}}
+            </label>
+         </div>
+         <div class="form-check mb-3">
+            <label for="B" class="form-check-label" style="white-space: pre">
+               <input type="radio" id="B" [checked]="qa.selected==='b'" name="B" class="form-check-input">{{qa.optionB}}
+            </label>
+         </div>
+         <div class="form-check mb-3">
+            <label for="C" class="form-check-label" style="white-space: pre">
+               <input type="radio" id="C" [checked]="qa.selected==='c'" name="C" class="form-check-input">{{qa.optionC}}
+            </label>
+         </div>
+         <div class="form-check mb-3">
+            <label for="D" class="form-check-label" style="white-space: pre">
+               <input type="radio" id="D" [checked]="qa.selected==='d'" name="D" class="form-check-input">{{qa.optionD}}
+            </label>
+         </div>
       </ng-template>
 
-    </div>
+   </div>
 </div>
-
