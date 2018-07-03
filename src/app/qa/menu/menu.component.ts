@@ -1,5 +1,5 @@
 import { Component, OnInit, OnChanges } from '@angular/core';
-import {ActivatedRoute, Router} from "@angular/router";
+import {ActivatedRoute, Params, Router} from "@angular/router";
 import {QaService} from "../qa.service";
 
 @Component({
@@ -10,11 +10,11 @@ import {QaService} from "../qa.service";
 export class MenuComponent implements OnChanges {
 
   public questions = this.qaService.getQuestions();
-  public q = 1;
+  public q = 0;
   constructor(private route: ActivatedRoute, private router: Router, private qaService: QaService) { }
 
 
   ngOnChanges(){
-    this.q = this.route.snapshot.queryParams['q'];
+
   }
 }

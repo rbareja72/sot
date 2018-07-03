@@ -9,7 +9,7 @@ export class QaService{
       'void main()\n' +
       '{\n' +
       '\tint a=10,i;\n' +
-      '\tfor(i=0;i<a;i++){\n' +
+      '\tfor(i=0;i<a;i++)\n\t{\n' +
       '\t\tprintf("%d",a);\n' +
       '\t}\n' +
       '\tgetch();\n' +
@@ -67,6 +67,10 @@ export class QaService{
 
   getQuestion(i: number): QuestionModel{
     return this.questions[i];
+  }
+
+  setSelected(q: number, value: string){
+    this.questions[q].selected = value;
   }
 
 }
