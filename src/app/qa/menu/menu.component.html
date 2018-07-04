@@ -6,5 +6,16 @@
     routerLinkActive="active"
     [queryParams]="{'q': j+1}">
       Question {{j+1}}
+    <ng-template [ngIf]="i.selected">
+      <div class="float-right ">
+        <img [src]="tick" width="20" height="20">
+      </div>
+    </ng-template>
+
+    <ng-template [ngIf]="i.flagged">
+      <div class="float-right pr-3">
+        <img [src]="warn" width="25" height="25">
+      </div>
+    </ng-template>
   </a>
 </div>

@@ -11,6 +11,9 @@ export class MenuComponent implements OnChanges {
 
   public questions = this.qaService.getQuestions();
   public q = 0;
+  public tick = '/assets/tick-512.png';
+  public warn = '/assets/orange-warning-icon-3.png';
+
   constructor(private route: ActivatedRoute, private router: Router, private qaService: QaService) { }
 
 

@@ -18,7 +18,8 @@ export class QaService{
       'conio.h',
       'stdlib.h',
       'None of the above',
-      ''
+      '',
+      false
     ),
     new QuestionModel(
       'A train running at the speed of 60 km/hr crosses a pole in 9 seconds. What is the length of the train?',
@@ -26,7 +27,8 @@ export class QaService{
       '180 metres',
       '324 metres',
       '150 metres',
-      ''
+      '',
+      false
     ),
     new QuestionModel(
       'A train 125 m long passes a man, running at 5 km/hr in the same direction in which the train is going,' +
@@ -35,7 +37,8 @@ export class QaService{
       '50 km/hr',
       '54 km/hr',
       '55 km/hr',
-      ''
+      '',
+      false
     ),
     new QuestionModel(
       'The length of the bridge, which a train 130 metres long and travelling at 45 km/hr can cross in 30 seconds,' +
@@ -44,7 +47,8 @@ export class QaService{
       '225 m',
       '245 m',
       '250 m',
-      ''
+      '',
+      false
     ),
     new QuestionModel(
       'Two trains running in opposite directions cross a man standing on the platform in 27 seconds ' +
@@ -53,7 +57,8 @@ export class QaService{
       '3 : 2',
       '3 : 4',
       'None of these',
-      ''
+      '',
+      false
     )
   ];
 
@@ -71,6 +76,10 @@ export class QaService{
 
   setSelected(q: number, value: string){
     this.questions[q].selected = value;
+  }
+
+  setFlagged(q: number, value: boolean){
+    this.questions[q].flagged = value;
   }
 
 }

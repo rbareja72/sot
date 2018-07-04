@@ -14,6 +14,7 @@ import {FormsModule} from "@angular/forms";
 import {AuthService} from "./auth/auth.service";
 import {AuthGuardService} from "./auth/auth-guard.service";
 import {QaService} from "./qa/qa.service";
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import {QaService} from "./qa/qa.service";
     MainComponent,
     QaComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

@@ -18,13 +18,27 @@ export class AuthService{
     this.status = 0;
   }
 
-  isAuthenticated():boolean{
-    if(this.status === 1){
+  isLoggedIn():boolean{
+    if(this.status >= 1){
       return true;
     }else{
       return false;
     }
   }
+
+  testStarted(){
+    this.status = 2;
+  }
+
+  isAuthenticated(){
+    if(this.status === 2){
+      return true;
+    }else{
+      return false;
+    }
+  }
+
+
 
 }
 
