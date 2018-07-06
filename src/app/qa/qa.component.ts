@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
+import {timer} from "rxjs/index";
+import {AuthService} from "../auth/auth.service";
 
 @Component({
   selector: 'app-qa',
@@ -8,9 +10,10 @@ import {ActivatedRoute} from "@angular/router";
 })
 export class QaComponent implements OnInit {
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit() {
+
 
   }
 

@@ -1,6 +1,9 @@
+import {Subject} from "rxjs/index";
+
 export class AuthService{
   private username = '1';
   private password = '1';
+  testStart = new Subject<boolean>();
   private status = 0; //untouched
 
   login(username: string, password: string): number {
@@ -28,6 +31,7 @@ export class AuthService{
 
   testStarted(){
     this.status = 2;
+    this.testStart.next(true);
   }
 
   isAuthenticated(){
