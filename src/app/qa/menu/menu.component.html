@@ -13,7 +13,7 @@
     </ng-template>
 
     <ng-template [ngIf]="i.flagged">
-      <div class="float-right pr-3">
+      <div class="float-right" [ngClass]="{'pr-3' : i.selected}">
         <img [src]="warn" width="25" height="25">
       </div>
     </ng-template>

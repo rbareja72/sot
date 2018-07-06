@@ -31,7 +31,6 @@ export class ContentComponent implements OnInit {
   }
 
   change(form: NgForm): void{
-    console.log(form.value);
     this.qaService.setSelected(this.q, form.value.option);
   }
 

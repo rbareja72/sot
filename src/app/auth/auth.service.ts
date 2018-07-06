@@ -19,6 +19,7 @@ export class AuthService{
 
   logout(){
     this.status = 0;
+    this.testStart.next(false);
   }
 
   isLoggedIn():boolean{
